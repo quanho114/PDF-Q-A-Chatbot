@@ -1,0 +1,16 @@
+Upload PDF File,Input Query,Answer,flag,username,timestamp
+flagged/Upload PDF File/e851d4362aa79344f768/01.pdf,Summarize the document,"'
+
+The text describes a system called DocChat, which is designed to provide precise, document-grounded answers to users. It uses a multi-agent Retrieval-Augmented Generation (RAG) system that intelligently retrieves, analyzes, and verifies information from complex documents.
+
+The system begins by building a vector database using Docling, an open-source document processing library. Docling is chosen for its high-precision parsing and structured data extraction capabilities, particularly its ability to accurately parse complex table structures, reading sequences, and multi-column layouts. It converts the document into a structured Markdown format for better chunking.
+
+LangChain then splits the document into logical chunks based on headers and stores them in ChromaDB, a vector store. The retrieval module uses BM25 and vector search to find the most contextually relevant document chunks.
+
+The answer generation and verification loop involves a research agent that generates an initial answer based on retrieved content. A sub-process then dynamically generates queries for more precise retrieval. The verification agent cross-checks the generated response against the retrieved content. If the response is fully supported, the system finalizes and returns the answer. If verification fails, the system re-runs the research step until a verifiable response is found.
+
+The system is designed to handle complex and long-form documents, extracting specific data points, summarizing sections, comparing multiple reports, or analyzing tables. It ensures that each answer is sourced directly from the provided document(s), preventing fabrication or unreliable outputs.
+
+The text also compares two approaches for document parsing: Docling and a hybrid approach using DocumentConverter and PyPDFLoader. Docling is praised for its accuracy in dealing with complex structures, while the hybrid approach is noted for its simplicity in extracting raw text from each PDF page.
+
+The hands-on journey outlined in the text aims to teach participants how to build and deploy a multi-agent RAG system, integrate hybrid retrieval techniques, implement a verification pipeline, and create an intuitive user interface with Gradio.",,,2025-08-29 06:21:48.041034
