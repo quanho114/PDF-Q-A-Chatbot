@@ -11,57 +11,27 @@ __pycache__/
 *.manifest
 *.spec
 
-# ============================================
 # Virtual environments
-# ============================================
+.env/
 .venv/
-venv/
 env/
+venv/
 ENV/
-*.virtualenv
 
-# ============================================
+# Build & distribution
+build/
+dist/
+pip-wheel-metadata/
+
 # Logs & temp files
-# ============================================
 *.log
 *.tmp
-*.swp
-*.swo
-*.bak
 
-# ============================================
-# Jupyter / Colab
-# ============================================
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# ============================================
-# OS files
-# ============================================
-.DS_Store
-Thumbs.db
-
-# ============================================
-# Editors / IDEs
-# ============================================
+# IDE / Editor configs
 .vscode/
 .idea/
 .theia/
-*.code-workspace
 
-# ============================================
-# LangChain / ChromaDB cache
-# ============================================
-chroma/
-chroma_db/
-chroma.sqlite*
-db.sqlite*
-*.chroma-*
-index/
-indexes/
-
-# ============================================
-# Gradio cache
-# ============================================
-gradio_cached_examples/
-gradio_cache/
+# OS-specific files
+.DS_Store
+Thumbs.db
