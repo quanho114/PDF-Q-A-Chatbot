@@ -1,0 +1,37 @@
+# ============================================
+# Python cache & compiled files
+# ============================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# Build & distribution
+build/
+dist/
+pip-wheel-metadata/
+
+# Logs & temp files
+*.log
+*.tmp
+
+# IDE / Editor configs
+.vscode/
+.idea/
+.theia/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
